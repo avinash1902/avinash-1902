@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play store - Discover Amazing Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        secondary: {
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 px-6 py-4 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="package" class="text-primary-500 w-8 h-8"></i>
+                <span class="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">GameVortex</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="hover:text-primary-400 transition">Home</a>
+                <a href="#" class="hover:text-primary-400 transition">Top Games</a>
+                <a href="#" class="hover:text-primary-400 transition">Categories</a>
+                <a href="#" class="hover:text-primary-400 transition">My Games</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full hover:bg-gray-700">
+                    <i data-feather="search" class="w-5 h-5"></i>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-700">
+                    <i data-feather="user" class="w-5 h-5"></i>
+                </button>
+                <button class="md:hidden p-2 rounded-full hover:bg-gray-700">
+                    <i data-feather="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Your Next <span class="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Favorite Game</span></h1>
+                <p class="text-lg text-gray-300 mb-6">Explore thousands of amazing games across all genres. Download and play instantly!</p>
+                <div class="flex space-x-4">
+                    <button class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">Browse Games</button>
+                    <button class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition">Learn More</button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="http://static.photos/gaming/1200x630/42" alt="Gaming Hero" class="rounded-xl shadow-2xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Featured Games</h2>
+                <a href="#" class="text-primary-500 hover:text-primary-400 flex items-center">
+                    See all <i data-feather="chevron-right" class="ml-1 w-5 h-5"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Game Card 1 -->
+                <div class="game-card bg-gray-800 rounded-xl overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="http://static.photos/gaming/640x360/1" alt="Cyber Strike" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Cyber Strike</h3>
+                                <p class="text-gray-400 text-sm">FPS • Action</p>
+                            </div>
+                            <span class="bg-primary-500 text-xs px-2 py-1 rounded">4.8★</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-300">Free</span>
+                            <button class="bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 rounded-lg text-sm transition">Install</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game Card 2 -->
+                <div class="game-card bg-gray-800 rounded-xl overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="http://static.photos/gaming/640x360/2" alt="Dragon Quest" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Dragon Quest</h3>
+                                <p class="text-gray-400 text-sm">RPG • Adventure</p>
+                            </div>
+                            <span class="bg-primary-500 text-xs px-2 py-1 rounded">4.7★</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-300">$4.99</span>
+                            <button class="bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 rounded-lg text-sm transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game Card 3 -->
+                <div class="game-card bg-gray-800 rounded-xl overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="http://static.photos/gaming/640x360/3" alt="Puzzle Masters" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Puzzle Masters</h3>
+                                <p class="text-gray-400 text-sm">Puzzle • Casual</p>
+                            </div>
+                            <span class="bg-primary-500 text-xs px-2 py-1 rounded">4.5★</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-300">Free</span>
+                            <button class="bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 rounded-lg text-sm transition">Install</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game Card 4 -->
+                <div class="game-card bg-gray-800 rounded-xl overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="http://static.photos/gaming/640x360/4" alt="Racing Legends" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Racing Legends</h3>
+                                <p class="text-gray-400 text-sm">Racing • Sports</p>
+                            </div>
+                            <span class="bg-primary-500 text-xs px-2 py-1 rounded">4.6★</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-300">$2.99</span>
+                            <button class="bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 rounded-lg text-sm transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-12 px-6 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8">Browse Categories</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 rounded-lg p-4 flex flex-col items-center transition">
+                    <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mb-2">
+                        <i data-feather="target" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-medium">Action</span>
+                </a>
+                
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 rounded-lg p-4 flex flex-col items-center transition">
+                    <div class="w-12 h-12 bg-secondary-500 rounded-full flex items-center justify-center mb-2">
+                        <i data-feather="compass" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-medium">Adventure</span>
+                </a>
+                
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 rounded-lg p-4 flex flex-col items-center transition">
+                    <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center mb-2">
+                        <i data-feather="heart" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-medium">Casual</span>
+                </a>
+                
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 rounded-lg p-4 flex flex-col items-center transition">
+                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mb-2">
+                        <i data-feather="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-medium">Strategy</span>
+                </a>
+                
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 rounded-lg p-4 flex flex-col items-center transition">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-2">
+                        <i data-feather="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-medium">Sports</span>
+                </a>
+                
+                <a href="#" class="bg-gray-700 hover:bg-gray-600 rounded-lg p-4 flex flex-col items-center transition">
+                    <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-2">
+                        <i data-feather="cloud" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-sm font-medium">RPG</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Charts -->
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Top Charts</h2>
+                <a href="#" class="text-primary-500 hover:text-primary-400 flex items-center">
+                    See all <i data-feather="chevron-right" class="ml-1 w-5 h-5"></i>
+                </a>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl overflow-hidden">
+                <!-- Top Game 1 -->
+                <div class="flex flex-col md:flex-row border-b border-gray-700 last:border-b-0">
+                    <div class="md:w-1/3">
+                        <img src="http://static.photos/gaming/640x360/5" alt="Top Game" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <span class="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-bold mr-3">1</span>
+                                <h3 class="text-xl font-bold">Galactic Conquest</h3>
+                            </div>
+                            <p class="text-gray-400 mb-4">Build your empire across the galaxy in this epic strategy game</p>
+                            <div class="flex items-center">
+                                <div class="flex mr-4">
+                                    <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current mr-1"></i>
+                                    <span class="text-sm">4.9</span>
+                                </div>
+                                <span class="text-sm text-gray-400">10M+ downloads</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-300">Free (In-app purchases)</span>
+                            <button class="bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 rounded-lg text-sm transition">Install</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Top Game 2 -->
+                <div class="flex flex-col md:flex-row border-b border-gray-700 last:border-b-0">
+                    <div class="md:w-1/3">
+                        <img src="http://static.photos/gaming/640x360/6" alt="Top Game" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <span class="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-bold mr-3">2</span>
+                                <h3 class="text-xl font-bold">Shadow Assassin</h3>
+                            </div>
+                            <p class="text-gray-400 mb-4">Stealth action game with stunning visuals and intense combat</p>
+                            <div class="flex items-center">
+                                <div class="flex mr-4">
+                                    <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current mr-1"></i>
+                                    <span class="text-sm">4.8</span>
+                                </div>
+                                <span class="text-sm text-gray-400">5M+ downloads</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-gray-300">$7.99</span>
+                            <button class="bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 rounded-lg text-sm transition">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">GameVortex</h3>
+                    <p class="text-gray-400">Discover and play the best mobile games across all genres.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2023 GameVortex. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
